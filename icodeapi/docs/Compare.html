@@ -1,0 +1,658 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-cn" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>与TuringAPI的对比 · icodeapi documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-algorithmarchive-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code-optimize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Contributing.html" />
+    
+    
+    <link rel="prev" href="v1.4.0.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xbzstudio/icodeapi" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://xbzstudio.github.io/" target="_blank" class="custom-link">XbzStudio</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://xbz-studio.gitbook.io/turingapi" target="_blank" class="custom-link">TuringAPI</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    主页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="QuickStart.html">
+            
+                <a href="QuickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Login.html">
+            
+                <a href="Login.html">
+            
+                    
+                    登录账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="GetWorks.html">
+            
+                <a href="GetWorks.html">
+            
+                    
+                    获取作品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="GetPersonInfo.html">
+            
+                <a href="GetPersonInfo.html">
+            
+                    
+                    获取用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="DoSomething.html">
+            
+                <a href="DoSomething.html">
+            
+                    
+                    做些什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="AsyncSupport.html">
+            
+                <a href="AsyncSupport.html">
+            
+                    
+                    异步支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Tools.html">
+            
+                <a href="Tools.html">
+            
+                    
+                    工具模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Server.html">
+            
+                <a href="Server.html">
+            
+                    
+                    构建服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Updates.html">
+            
+                <a href="Updates.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="v1.0.0.html">
+            
+                <a href="v1.0.0.html">
+            
+                    
+                    v1.0.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="v1.0.1.html">
+            
+                <a href="v1.0.1.html">
+            
+                    
+                    v1.0.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="v1.0.3.html">
+            
+                <a href="v1.0.3.html">
+            
+                    
+                    v1.0.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="v1.3.0.html">
+            
+                <a href="v1.3.0.html">
+            
+                    
+                    v1.3.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="v1.4.0.html">
+            
+                <a href="v1.4.0.html">
+            
+                    
+                    v1.4.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="Compare.html">
+            
+                <a href="Compare.html">
+            
+                    
+                    与TuringAPI的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Contributing.html">
+            
+                <a href="Contributing.html">
+            
+                    
+                    贡献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >与TuringAPI的对比</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="icodeapi&#x4E0E;turingapi&#x7684;&#x5BF9;&#x6BD4;">icodeapi&#x4E0E;TuringAPI&#x7684;&#x5BF9;&#x6BD4;</h2>
+<p>TuringAPI&#x662F;icodeapi&#x7684;&#x524D;&#x8EAB;&#xFF0C;&#x5B83;&#x662F;&#x7B2C;&#x4E00;&#x4EE3;&#x5C0F;&#x56FE;&#x7075;&#x793E;&#x533A;API&#x6846;&#x67B6;&#xFF0C;&#x800C;icodeapi&#x662F;&#x7B2C;&#x4E8C;&#x4EE3;&#x3002;icodeapi&#x5728;&#x591A;&#x65B9;&#x9762;&#x8FDB;&#x884C;&#x4E86;&#x6539;&#x8FDB;&#x548C;&#x4F18;&#x5316;&#xFF0C;&#x6211;&#x4EEC;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x60A8;&#x4F7F;&#x7528;icodeapi&#x3002;  </p>
+<h3 id="&#x517C;&#x5BB9;&#x6027;&#xFF1A;">&#x517C;&#x5BB9;&#x6027;&#xFF1A;</h3>
+<blockquote>
+<p>icodeapi : python 3.10+<br>TuringAPI : python 3.7+  </p>
+</blockquote>
+<p>&#x7531;&#x6B64;&#x53EF;&#x5F97;&#xFF0C;TuringAPI&#x7684;&#x517C;&#x5BB9;&#x6027;&#x6BD4;icodeapi&#x8981;&#x597D;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#x5B83;&#x53EF;&#x4EE5;&#x5728;Windows7&#x7CFB;&#x7EDF;&#x4E0A;&#x4F7F;&#x7528;&#x3002;<br>&#x4F46;&#x662F;&#xFF0C;icodeapi&#x7684;&#x529F;&#x80FD;&#x4F1A;&#x66F4;&#x52A0;&#x4E30;&#x5BCC;&#xFF01;  </p>
+<h3 id="&#x540C;&#x6B65;api&#xFF1A;">&#x540C;&#x6B65;API&#xFF1A;</h3>
+<p><strong>&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF1A;&#x8F93;&#x51FA;&#x7528;&#x6237;&#x4FE1;&#x606F;</strong><br>icodeapi:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> IcodeAPI
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+api = IcodeAPI(cookie = COOKIE)
+print(api.getInfo())
+</code></pre>
+<p>TuringAPI: </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> FinalTuringAPI <span class="hljs-keyword">import</span> icodeUser
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+api = icodeUser(cookie = COOKIE)
+print(api.info)
+</code></pre>
+<p><strong>&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF1A;&#x5237;&#x6D4F;&#x89C8;&#x91CF;</strong><br>icodeapi:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> IcodeAPI
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+ID = input(<span class="hljs-string">&apos;Enter workId: &apos;</span>)
+api = IcodeAPI(cookie = COOKIE, timeout = <span class="hljs-keyword">None</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10000</span>):
+    api.getWorkDetail(workId = ID, addBrowseNum = <span class="hljs-keyword">True</span>)
+</code></pre>
+<p>TuringAPI: </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> FinalTuringAPI <span class="hljs-keyword">import</span> icodeUser
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+ID = input(<span class="hljs-string">&apos;Enter workId: &apos;</span>)
+api = icodeUser(cookie = COOKIE)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10000</span>):
+    api.getWorkDetail(workId = ID)
+</code></pre>
+<p><strong>&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF1A;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x5E76;&#x4E0B;&#x8F7D;&#x56DE;&#x6765;&#xFF0C;&#x8F93;&#x51FA;&#x4E0A;&#x4F20;&#x6587;&#x4EF6;&#x7684;&#x8FD4;&#x56DE;&#x503C;</strong><br>icodeapi:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> IcodeAPI
+path = input(<span class="hljs-string">&quot;Enter the path to the file: &quot;</span>)
+cookie = input(<span class="hljs-string">&quot;Enter your cookie: &quot;</span>)
+api = IcodeAPI(cookie = cookie)
+<span class="hljs-keyword">with</span> open(path, <span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> f:
+    result = api.uploadFile(<span class="hljs-string">&apos;icodeapiTesting&apos;</span>, <span class="hljs-string">&apos;png&apos;</span>, f.read())
+    print(result)
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;C:\\Users\\icodeapiSystem\Desktop\\test.png&apos;</span>, <span class="hljs-string">&apos;wb&apos;</span>) <span class="hljs-keyword">as</span> f:
+    file = api.getScratchAsset(md5ext = <span class="hljs-string">&apos;icodeapiTesting.png&apos;</span>)
+    f.write(file)
+</code></pre>
+<p>TuringAPI: </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> FinalTuringAPI <span class="hljs-keyword">import</span> icodeUser
+<span class="hljs-keyword">from</span> urllib3 <span class="hljs-keyword">import</span> request
+path = input(<span class="hljs-string">&quot;Enter the path to the file: &quot;</span>)
+cookie = input(<span class="hljs-string">&quot;Enter your cookie: &quot;</span>)
+api = icodeUser(cookie = cookie)
+<span class="hljs-keyword">with</span> open(path, <span class="hljs-string">&quot;rb&quot;</span>) <span class="hljs-keyword">as</span> f:
+    result = api.uploadFile(<span class="hljs-string">&apos;icodeapiTesting&apos;</span>, <span class="hljs-string">&apos;png&apos;</span>, f.read())
+    result = result.json()
+    print(result)
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;C:\\Users\\icodeapiSystem\Desktop\\test.png&apos;</span>, <span class="hljs-string">&apos;wb&apos;</span>) <span class="hljs-keyword">as</span> f:
+    result = request(<span class="hljs-string">&apos;GET&apos;</span>,
+                      <span class="hljs-string">&apos;https://nos.netease.com/ydschool-online/svg/icodeapiTesting.png&apos;</span>
+                      )
+    result = result.data
+    f.write(result)
+</code></pre>
+<p><strong>&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF1A;&#x53D1;&#x5E03;&#x4E00;&#x4E2A;&#x4F5C;&#x54C1;&#xFF0C;&#x5E76;&#x518D;&#x91CD;&#x65B0;&#x53D1;&#x5E03;&#x4E00;&#x6B21;</strong><br>icodeapi:  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> IcodeAPI
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+api = IcodeAPI(cookie = COOKIE)
+workId = api.submitWork(workCode = <span class="hljs-string">&apos;Hello World&apos;</span>, 
+               workType = <span class="hljs-string">&apos;python&apos;</span>, 
+               title = <span class="hljs-string">&apos;icodeapi test&apos;</span>,
+               description = <span class="hljs-string">&apos;abc&apos;</span>)
+workId = workId.get(<span class="hljs-string">&apos;data&apos;</span>)
+info = (api.getWorkDetail(workId = workId), api.getWorkSubmitInfo(workId = workId))
+api.submitWork(workDetail = info, workId = workId)
+</code></pre>
+<p>TuringAPI:  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> FinalTuringAPI <span class="hljs-keyword">import</span> icodeUser
+COOKIE =  input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+api = icodeUser(cookie = COOKIE)
+workId = api.submitPython(<span class="hljs-string">&apos;Hello World&apos;</span>,
+                 title = <span class="hljs-string">&apos;icodeapi test&apos;</span>,
+                 description = <span class="hljs-string">&apos;abc&apos;</span>)
+workId = workId.json().get(<span class="hljs-string">&apos;data&apos;</span>)
+data = api.getWorkDetail(workId, isParse = <span class="hljs-keyword">True</span>)
+code = data.get(<span class="hljs-string">&apos;code&apos;</span>)
+title = data.get(<span class="hljs-string">&apos;title&apos;</span>)
+description = data.get(<span class="hljs-string">&apos;description&apos;</span>)
+api.reSubmitPython(workId, code, title, description)
+</code></pre>
+<h3 id="&#x5F02;&#x6B65;api&#xFF1A;">&#x5F02;&#x6B65;API&#xFF1A;</h3>
+<p><strong>&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF1A;&#x5237;&#x6D4F;&#x89C8;&#x91CF;</strong><br>icodeapi:  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> icodeapi.tools <span class="hljs-keyword">import</span> ViewNumMaker
+<span class="hljs-keyword">import</span> asyncio
+workId = input(<span class="hljs-string">&quot;Enter workId: &quot;</span>)
+asyncio.run(ViewNumMaker(workId = workId))
+</code></pre>
+<p>TuringAPI:  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> FinalTuringAPI
+workId = input(<span class="hljs-string">&apos;Enter workId: &apos;</span>)
+api = FinalTuringAPI.icodeUser(<span class="hljs-keyword">None</span>)
+Event = FinalTuringAPI.event(name = <span class="hljs-string">&apos;event1&apos;</span>)
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">5000</span>):
+    FinalTuringAPI.addTask(Event, api.getWorkDetail, <span class="hljs-string">f&apos;<span class="hljs-subst">{i}</span>&apos;</span>, [workId])
+Event.run()
+</code></pre>
+<p><strong>&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#xFF1A;&#x6784;&#x9020;web&#x670D;&#x52A1;&#x7AEF;&#xFF1A;</strong><br>icodeapi:  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI
+<span class="hljs-keyword">from</span> fastapi.responses <span class="hljs-keyword">import</span> JSONResponse
+<span class="hljs-keyword">from</span> fastapi.middleware.cors <span class="hljs-keyword">import</span> CORSMiddleware
+<span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> AsyncIcodeAPI
+<span class="hljs-keyword">import</span> uvicorn
+app : FastAPI = FastAPI() <span class="hljs-comment"># &#x521B;&#x5EFA;fastapi&#x5B9E;&#x4F8B;</span>
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[<span class="hljs-string">&apos;*&apos;</span>],
+    allow_credentials = <span class="hljs-keyword">True</span>,
+    allow_methods=[<span class="hljs-string">&apos;*&apos;</span>],
+    allow_headers=[<span class="hljs-string">&apos;*&apos;</span>],
+)
+api : AsyncIcodeAPI = AsyncIcodeAPI() <span class="hljs-comment"># &#x5B9E;&#x4F8B;&#x5316;AsyncIcodeAPI</span>
+<span class="hljs-meta">@app.get(&quot;/&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getWork</span><span class="hljs-params">()</span> -&gt; JSONResponse:</span> <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4F5C;&#x54C1;&#x96C6;</span>
+    results = <span class="hljs-keyword">await</span> api.getWorks()
+    <span class="hljs-keyword">return</span> JSONResponse(results)
+<span class="hljs-meta">@app.get(&quot;/{workId}&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getWorkById</span><span class="hljs-params">(workId : str)</span> -&gt; JSONResponse:</span> <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4F5C;&#x54C1;&#x4FE1;&#x606F;</span>
+    results = <span class="hljs-keyword">await</span> api.getWorkDetail(workId)
+    <span class="hljs-keyword">return</span> JSONResponse(results)
+<span class="hljs-meta">@app.get(&quot;/person/{userId}&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getPerson</span><span class="hljs-params">(userId : str)</span> -&gt; JSONResponse:</span> <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;</span>
+    results = <span class="hljs-keyword">await</span> api.getPersonInfo(userId)
+    <span class="hljs-keyword">return</span> JSONResponse(results)
+uvicorn.run(app, host = <span class="hljs-string">&quot;0.0.0.0&quot;</span>, port = <span class="hljs-number">80</span>)
+</code></pre>
+<p>TuringAPI:<br>&#x65E0;&#x6CD5;&#x6784;&#x5EFA;  </p>
+<h3 id="&#x54CD;&#x5E94;&#x5F0F;&#x673A;&#x5668;&#x4EBA;&#xFF1A;">&#x54CD;&#x5E94;&#x5F0F;&#x673A;&#x5668;&#x4EBA;&#xFF1A;</h3>
+<p><strong>&#x81EA;&#x52A8;&#x56DE;&#x590D;&#x6D88;&#x606F;&#xFF1A;</strong><br>icodeapi:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> AsyncIcodeAPI
+<span class="hljs-keyword">import</span> icodeapi.server <span class="hljs-keyword">as</span> icodeserver
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+api = AsyncIcodeAPI(cookie = COOKIE)
+SERVER = icodeserver.IcodeServer(api  = api)
+<span class="hljs-meta">@SERVER.CheckMessage()</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">AutoReply</span><span class="hljs-params">(content : str, userId : str, bot : icodeserver.IcodeServer)</span>:</span>
+    <span class="hljs-keyword">if</span> content == <span class="hljs-string">&apos;test&apos;</span>:
+        <span class="hljs-keyword">await</span> bot.fastReply(userId, <span class="hljs-string">&apos;test&apos;</span>)
+icodeserver.RunServer(SERVER)
+</code></pre>
+<p>TuringAPI:</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> FinalTuringAPI <span class="hljs-keyword">import</span> icodeUser
+COOKIE = input(<span class="hljs-string">&apos;Enter your cookie: &apos;</span>)
+api = icodeUser(cookie = COOKIE)
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    messages = api.getMessage(<span class="hljs-number">1</span>, <span class="hljs-number">20</span>, isParse = <span class="hljs-keyword">True</span>)
+    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> messages:
+        <span class="hljs-keyword">if</span> i.get(<span class="hljs-string">&apos;content&apos;</span>) == <span class="hljs-string">&apos;test&apos;</span>:
+            workId = api.getPersonWorks(i.get(<span class="hljs-string">&apos;actionUserId&apos;</span>), <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-keyword">True</span>)
+            api.comment(workId[<span class="hljs-number">0</span>].get(<span class="hljs-string">&apos;id&apos;</span>), <span class="hljs-string">&apos;test&apos;</span>)
+</code></pre>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x4F7F;&#x7528;Windows8&#x53CA;&#x4EE5;&#x4E0B;&#x7684;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x9009;&#x62E9;TuringAPI&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;Windows 8.1&#x53CA;&#x4EE5;&#x4E0A;&#x7CFB;&#x7EDF;&#xFF0C;&#x6211;&#x4EEC;&#x6781;&#x529B;&#x63A8;&#x8350;&#x4F60;&#x4F7F;&#x7528;icodeapi&#xFF01;  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="v1.4.0.html" class="navigation navigation-prev " aria-label="Previous page: v1.4.0">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Contributing.html" class="navigation navigation-next " aria-label="Next page: 贡献">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"与TuringAPI的对比","level":"1.8","depth":1,"next":{"title":"贡献","level":"1.9","depth":1,"path":"Contributing.md","ref":"Contributing.md","articles":[]},"previous":{"title":"v1.4.0","level":"1.7.5","depth":2,"path":"v1.4.0.md","ref":"v1.4.0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","-highlight","algorithmarchive-highlight","code-optimize","expandable-chapters","search-plus","hide-element","insert-logo","custom-favicon","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"icodeapi.ico","back-to-top-button":{},"custom-favicon":{},"algorithmarchive-highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"code-optimize":{"copyButtons":true,"showLines":true},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"icodeapi.svg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"icodeapi documentation","language":"zh-cn","links":{"sidebar":{"Github":"https://github.com/xbzstudio/icodeapi","XbzStudio":"https://xbzstudio.github.io/","TuringAPI":"https://xbz-studio.gitbook.io/turingapi"}},"gitbook":"*"},"file":{"path":"Compare.md","mtime":"2023-11-24T14:35:24.760Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-27T13:05:34.855Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-code-optimize/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

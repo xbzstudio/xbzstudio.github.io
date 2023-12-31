@@ -1,0 +1,547 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-cn" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>异步支持 · icodeapi documentation</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-algorithmarchive-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code-optimize/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Tools.html" />
+    
+    
+    <link rel="prev" href="DoSomething.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="輸入並搜尋" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/xbzstudio/icodeapi" target="_blank" class="custom-link">Github</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://xbzstudio.github.io/" target="_blank" class="custom-link">XbzStudio</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://xbz-studio.gitbook.io/turingapi" target="_blank" class="custom-link">TuringAPI</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    主页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="QuickStart.html">
+            
+                <a href="QuickStart.html">
+            
+                    
+                    快速开始
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Login.html">
+            
+                <a href="Login.html">
+            
+                    
+                    登录账号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="GetWorks.html">
+            
+                <a href="GetWorks.html">
+            
+                    
+                    获取作品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="GetPersonInfo.html">
+            
+                <a href="GetPersonInfo.html">
+            
+                    
+                    获取用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="DoSomething.html">
+            
+                <a href="DoSomething.html">
+            
+                    
+                    做些什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="AsyncSupport.html">
+            
+                <a href="AsyncSupport.html">
+            
+                    
+                    异步支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Tools.html">
+            
+                <a href="Tools.html">
+            
+                    
+                    工具模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Server.html">
+            
+                <a href="Server.html">
+            
+                    
+                    构建服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Updates.html">
+            
+                <a href="Updates.html">
+            
+                    
+                    更新日志
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="v1.0.0.html">
+            
+                <a href="v1.0.0.html">
+            
+                    
+                    v1.0.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="v1.0.1.html">
+            
+                <a href="v1.0.1.html">
+            
+                    
+                    v1.0.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="v1.0.3.html">
+            
+                <a href="v1.0.3.html">
+            
+                    
+                    v1.0.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="v1.3.0.html">
+            
+                <a href="v1.3.0.html">
+            
+                    
+                    v1.3.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="v1.4.0.html">
+            
+                <a href="v1.4.0.html">
+            
+                    
+                    v1.4.0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Compare.html">
+            
+                <a href="Compare.html">
+            
+                    
+                    与TuringAPI的对比
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Contributing.html">
+            
+                <a href="Contributing.html">
+            
+                    
+                    贡献
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本書使用 GitBook 釋出
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >异步支持</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x5F02;&#x6B65;&#x652F;&#x6301;">&#x5F02;&#x6B65;&#x652F;&#x6301;</h2>
+<p>&#x4E0E;<a href="https://xbz-studio.gitbook.io/turingapi" target="_blank">TuringAPI</a>&#x7684;&#x5F02;&#x6B65;&#x652F;&#x6301;&#x4E0D;&#x540C;&#xFF0C;icodeapi&#x5F03;&#x7528;&#x4E86;&#x7E41;&#x7410;&#x7684;<a href="https://xbz-studio.gitbook.io/turingapi/AsyncSystem/AsyncModel" target="_blank">&#x4E09;&#x5C42;&#x5F02;&#x6B65;&#x6A21;&#x578B;</a>&#xFF08;<code>turingAPI.task</code>, <code>turingAPI.event</code>, <code>turingAPI.eventPool</code>&#xFF09;&#xFF0C;&#x800C;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;<code>AsyncIcodeAPI</code>&#x7C7B;&#xFF0C;&#x5305;&#x542B;&#x7684;&#x5747;&#x4E3A;&#x5F02;&#x6B65;&#x65B9;&#x6CD5;&#x3002;<br><code>AsyncIcodeAPI</code>&#x548C;<code>IcodeAPI</code>&#x7C7B;&#x7684;API&#x6CA1;&#x6709;&#x591A;&#x5927;&#x53D8;&#x66F4;&#xFF0C;&#x57FA;&#x672C;&#x4E0A;&#x53EF;&#x4EE5;&#x5957;<code>IcodeAPI</code>&#x7684;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x3002;<br><strong>&#x4F46;&#x662F;&#x6709;&#x5C11;&#x8BB8;&#x4E0D;&#x540C;&#x3002;</strong>  </p>
+<h3 id="&#x767B;&#x5F55;&#x8D26;&#x53F7;">&#x767B;&#x5F55;&#x8D26;&#x53F7;</h3>
+<p><code>AsyncIcodeAPI</code>&#x5728;&#x5B9E;&#x4F8B;&#x5316;&#x540E;&#x9700;&#x8981;&#x624B;&#x52A8;&#x767B;&#x5F55;&#x3002;&#x4E14;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x4E00;&#x4E9B;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x574F;&#x4E8B;&#x53D1;&#x751F;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x6C60;&#x3002;  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> asyncio
+<span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> AsyncIcodeAPI
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;cookie</span>
+COOKIE : str = input(<span class="hljs-string">&apos;Enter cookie: &apos;</span>)
+<span class="hljs-comment"># &#x5B9E;&#x4F8B;&#x5316;AsyncIcodeAPI&#x5BF9;&#x8C61;</span>
+user : AsyncIcodeAPI = AsyncIcodeAPI(cookie=COOKIE)
+
+<span class="hljs-comment"># &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x767B;&#x5F55;&#x548C;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x4FE1;&#x606F;</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">(api: AsyncIcodeAPI)</span>:</span>
+   <span class="hljs-comment"># &#x767B;&#x5F55;</span>
+    <span class="hljs-keyword">await</span> api.login()
+    print(api.getInfo())
+   <span class="hljs-comment"># &#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x6C60;</span>
+    <span class="hljs-keyword">await</span> api.closeClient()
+
+asyncio.run(main(user))
+</code></pre>
+<h3 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h3>
+<p>&#x6784;&#x5EFA;fastapi&#x670D;&#x52A1;&#x5668;&#x3002;  </p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> fastapi <span class="hljs-keyword">import</span> FastAPI
+<span class="hljs-keyword">from</span> fastapi.responses <span class="hljs-keyword">import</span> JSONResponse
+<span class="hljs-keyword">from</span> fastapi.middleware.cors <span class="hljs-keyword">import</span> CORSMiddleware
+<span class="hljs-keyword">from</span> icodeapi <span class="hljs-keyword">import</span> AsyncIcodeAPI
+<span class="hljs-keyword">import</span> uvicorn
+app : FastAPI = FastAPI() <span class="hljs-comment"># &#x521B;&#x5EFA;fastapi&#x5B9E;&#x4F8B;</span>
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[<span class="hljs-string">&apos;*&apos;</span>],
+    allow_credentials = <span class="hljs-keyword">True</span>,
+    allow_methods=[<span class="hljs-string">&apos;*&apos;</span>],
+    allow_headers=[<span class="hljs-string">&apos;*&apos;</span>],
+)
+api : AsyncIcodeAPI = AsyncIcodeAPI() <span class="hljs-comment"># &#x5B9E;&#x4F8B;&#x5316;AsyncIcodeAPI</span>
+<span class="hljs-meta">@app.get(&quot;/&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getWork</span><span class="hljs-params">()</span> -&gt; JSONResponse:</span> <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4F5C;&#x54C1;&#x96C6;</span>
+    results = <span class="hljs-keyword">await</span> api.getWorks()
+    <span class="hljs-keyword">return</span> JSONResponse(results)
+<span class="hljs-meta">@app.get(&quot;/{workId}&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getWorkById</span><span class="hljs-params">(workId : str)</span> -&gt; JSONResponse:</span> <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4F5C;&#x54C1;&#x4FE1;&#x606F;</span>
+    results = <span class="hljs-keyword">await</span> api.getWorkDetail(workId)
+    <span class="hljs-keyword">return</span> JSONResponse(results)
+<span class="hljs-meta">@app.get(&quot;/person/{userId}&quot;)</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getPerson</span><span class="hljs-params">(userId : str)</span> -&gt; JSONResponse:</span> <span class="hljs-comment"># &#x8FD4;&#x56DE;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;</span>
+    results = <span class="hljs-keyword">await</span> api.getPersonInfo(userId)
+    <span class="hljs-keyword">return</span> JSONResponse(results)
+uvicorn.run(app, host = <span class="hljs-string">&quot;0.0.0.0&quot;</span>, port = <span class="hljs-number">80</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="DoSomething.html" class="navigation navigation-prev " aria-label="Previous page: 做些什么">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Tools.html" class="navigation navigation-next " aria-label="Next page: 工具模块">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"异步支持","level":"1.4","depth":1,"next":{"title":"工具模块","level":"1.5","depth":1,"path":"Tools.md","ref":"Tools.md","articles":[]},"previous":{"title":"做些什么","level":"1.3","depth":1,"path":"DoSomething.md","ref":"DoSomething.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","-lunr","-highlight","algorithmarchive-highlight","code-optimize","expandable-chapters","search-plus","hide-element","insert-logo","custom-favicon","back-to-top-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":"icodeapi.ico","back-to-top-button":{},"custom-favicon":{},"algorithmarchive-highlight":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"code-optimize":{"copyButtons":true,"showLines":true},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"icodeapi.svg"},"expandable-chapters":{},"search-plus":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"icodeapi documentation","language":"zh-cn","links":{"sidebar":{"Github":"https://github.com/xbzstudio/icodeapi","XbzStudio":"https://xbzstudio.github.io/","TuringAPI":"https://xbz-studio.gitbook.io/turingapi"}},"gitbook":"*"},"file":{"path":"AsyncSupport.md","mtime":"2023-11-18T04:21:52.313Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-27T13:05:34.855Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-code-optimize/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
