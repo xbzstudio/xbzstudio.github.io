@@ -84,8 +84,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=微软雅黑:300,300i,400,400i,700,700i%7C['Cascadia+Code',+'Consolas']:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"微软雅黑";--md-code-font:"['Cascadia Code', 'Consolas']"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=微软雅黑:300,300i,400,400i,700,700i%7Cconsolas:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"微软雅黑";--md-code-font:"consolas"}</style>
       
     
     
@@ -111,6 +111,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#icodeapi" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -1644,6 +1649,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1704,6 +1711,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1721,9 +1730,28 @@
   
 
 
-  <h1>icodeapi</h1>
-
-
+<h1 id="icodeapi">icodeapi</h1>
+<p>icodeapi是第二代小图灵Python API框架，功能强大，使用简单。由<a href="https://xbzstudio.github.io/wiki/turing/team/mainTeam/下北泽">下北泽工作室</a>开发。</p>
+<p>icodeapi v1.0.0在2023.10.02发布，当时正值<a href="https://xbzstudio.github.io/wiki/turing/event/0923/">9·23事件</a>。</p>
+<p>以下是一段官方示例：
+<div class="highlight"><span class="filename">example.py</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">icodeapi</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">icodeapi</span> <span class="kn">import</span> <span class="n">server</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">cookie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter cookie: &quot;</span><span class="p">)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="n">api</span> <span class="o">=</span> <span class="n">icodeapi</span><span class="o">.</span><span class="n">AsyncIcodeAPI</span><span class="p">(</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span><span class="p">)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">Server</span> <span class="o">=</span> <span class="n">server</span><span class="o">.</span><span class="n">IcodeServer</span><span class="p">(</span><span class="n">api</span> <span class="o">=</span> <span class="n">api</span><span class="p">)</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nd">@Server</span><span class="o">.</span><span class="n">CheckMessage</span><span class="p">()</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">async</span> <span class="k">def</span> <span class="nf">AutoReply</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span> <span class="n">bot</span><span class="p">):</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="k">try</span><span class="p">:</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">fastReply</span><span class="p">(</span><span class="n">userId</span><span class="p">,</span> <span class="s1">&#39;Hello world!&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="k">except</span> <span class="ne">AssertionError</span><span class="p">:</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        <span class="k">pass</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="k">except</span><span class="p">:</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Unkown Error&#39;</span><span class="p">)</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">server</span><span class="o">.</span><span class="n">RunServer</span><span class="p">(</span><span class="n">Server</span><span class="p">)</span>
+</code></pre></div></p>
+<p><a href="https://pypi.org/project/icodeapi/">PyPI</a><br />
+<a href="https://github.com/xbzstudio/icodeapi">GitHub</a><br />
+<a href="https://xbzstudio.github.io/icodeapi/docs/">文档</a></p>
 
 
 

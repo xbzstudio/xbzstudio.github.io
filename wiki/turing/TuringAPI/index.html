@@ -84,8 +84,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=微软雅黑:300,300i,400,400i,700,700i%7C['Cascadia+Code',+'Consolas']:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"微软雅黑";--md-code-font:"['Cascadia Code', 'Consolas']"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=微软雅黑:300,300i,400,400i,700,700i%7Cconsolas:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"微软雅黑";--md-code-font:"consolas"}</style>
       
     
     
@@ -111,6 +111,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#turingapi" class="md-skip">
+          跳转至
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -1623,6 +1628,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1704,6 +1711,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1721,9 +1730,14 @@
   
 
 
-  <h1>TuringAPI</h1>
-
-
+<h1 id="turingapi">TuringAPI</h1>
+<p>TuringAPI是由<a href="https://xbzstudio.github.io/wiki/turing/team/mainTeam/下北泽">下北泽</a>开发的一款小图灵Python API框架，依赖urllib3，支持并发。原名TuringIO。</p>
+<p>原本是<a href="https://xbzstudio.github.io/wiki/turing/people/mainPeople/萌萌梦幻神兽">萌萌梦幻神兽</a>受到<a href="https://xbzstudio.github.io/wiki/turing/people/mainPeople/IcePear">冰梨</a>的启发而开始开发的，从2022.7开始开发，预计2022.8.15上线并售卖基础版及高级版。2022.9，由于萌萌梦幻神兽觉得以前写的代码过于屎山，于是打算重构整个项目，并听从冰梨意见改名为TuringAPI。</p>
+<p>TuringAPI是第一代小图灵Python API框架，拥有较为完整的功能，但对异步的支持非常一般，没用类型提示，甚至在正式版v1.0.0发布一年后才拥有PyPI页面。</p>
+<p>2022.11.25，TuringAPI v1.0.0发布，但从此也再也没有更新过下一个版本。由于PyPI中<code>turingAPI</code>模块被占用，只能叫做FinalTuringAPI。</p>
+<p>2023.10.02，<a href="https://xbzstudio.github.io/wiki/turing/icodeapi">icodeapi</a> v1.0.0发布，TuringAPI被下北泽工作室正式宣布停止支持。</p>
+<p><a href="https://xbz-studio.gitbook.io/turingapi/">文档1（Gitbook 正在运营）</a></p>
+<p><a href="https://xbzstudio.github.io/TuringAPI/docs">文档2（Github 正在开发）</a></p>
 
 
 
