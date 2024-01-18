@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://xbzstudio.github.io/icodeapi/docs/">
+        <link rel="canonical" href="https://xbzstudio.github.io/icodeapi/docs/GetPersonInfo/">
       
       
+        <link rel="prev" href="../GetWorks/">
       
-        <link rel="next" href="Login/">
+      
+        <link rel="next" href="../DoSomething/">
       
       
-      <link rel="icon" href="icodeapi.svg">
+      <link rel="icon" href="../icodeapi.svg">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>icodeapi文档</title>
+        <title>获取用户 - icodeapi文档</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
   
@@ -87,7 +89,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -127,9 +129,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="." title="icodeapi文档" class="md-header__button md-logo" aria-label="icodeapi文档" data-md-component="logo">
+    <a href=".." title="icodeapi文档" class="md-header__button md-logo" aria-label="icodeapi文档" data-md-component="logo">
       
-  <img src="icodeapi.svg" alt="logo">
+  <img src="../icodeapi.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -146,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              欢迎
+              获取用户
             
           </span>
         </div>
@@ -233,9 +235,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="icodeapi文档" class="md-nav__button md-logo" aria-label="icodeapi文档" data-md-component="logo">
+    <a href=".." title="icodeapi文档" class="md-nav__button md-logo" aria-label="icodeapi文档" data-md-component="logo">
       
-  <img src="icodeapi.svg" alt="logo">
+  <img src="../icodeapi.svg" alt="logo">
 
     </a>
     icodeapi文档
@@ -259,6 +261,66 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    登陆账号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GetWorks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    获取作品
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -273,18 +335,18 @@
           
   
   <span class="md-ellipsis">
-    欢迎
+    获取用户
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    欢迎
+    获取用户
   </span>
   
 
@@ -306,27 +368,51 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      安装
+      获取用户信息
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="获取用户信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urlid" class="md-nav__link">
+    <span class="md-ellipsis">
+      从url中获取用户id
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      环境要求
+      获取一个用户的基础信息
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#icodeapi" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      查看icodeapi版本和信息
+      获取用户作品信息
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取用户收藏信息
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -345,67 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Login/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    登陆账号
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="GetWorks/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    获取作品
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="GetPersonInfo/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    获取用户
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="DoSomething/" class="md-nav__link">
+      <a href="../DoSomething/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -425,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="AsyncSupport/" class="md-nav__link">
+      <a href="../AsyncSupport/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -445,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Tools/" class="md-nav__link">
+      <a href="../Tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -465,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Server/" class="md-nav__link">
+      <a href="../Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updates/Updates/" class="md-nav__link">
+      <a href="../updates/Updates/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updates/v1.0.0/" class="md-nav__link">
+      <a href="../updates/v1.0.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updates/v1.0.1/" class="md-nav__link">
+      <a href="../updates/v1.0.1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updates/v1.0.3/" class="md-nav__link">
+      <a href="../updates/v1.0.3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -606,7 +632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updates/v1.3.0/" class="md-nav__link">
+      <a href="../updates/v1.3.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="updates/v1.4.0/" class="md-nav__link">
+      <a href="../updates/v1.4.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Compare/" class="md-nav__link">
+      <a href="../Compare/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="Contributing/" class="md-nav__link">
+      <a href="../Contributing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,27 +741,51 @@
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      安装
+      获取用户信息
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="获取用户信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#urlid" class="md-nav__link">
+    <span class="md-ellipsis">
+      从url中获取用户id
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      环境要求
+      获取一个用户的基础信息
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#icodeapi" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      查看icodeapi版本和信息
+      获取用户作品信息
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取用户收藏信息
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -757,39 +807,98 @@
   
 
 
-<div align = "center">
-    <h1 style = "font-size:50px;margin:0px;">icodeapi</h1>
-    <br>
-</div>
+  <h1>获取用户</h1>
 
-<p>icodeapi是一个强大的、快速的、支持同步和异步的有道小图灵社区API框架。它运行在Python当中。由<a href="https://xbzstudio.github.io/">xbzstudio</a>开发。<br />
-<a href="https://xbz-studio.gitbook.io/turingapi">TuringAPI</a>是它的前身。  </p>
-<div align="center"><img src="icodeapi.svg"></div>
-
-<h2 id="_1">安装</h2>
-<p>可以使用pip安装icodeapi。<br />
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">pip</span> <span class="n">install</span> <span class="n">icodeapi</span>
+<h2 id="_1">获取用户信息</h2>
+<h3 id="urlid">从url中获取用户id</h3>
+<p>使用<code>getUserIdFromUrl</code>函数。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">getUserIdFromUrl</span><span class="p">(</span><span class="n">url</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
 </code></pre></div></p>
-<h2 id="_2">环境要求</h2>
-<p>Python版本：≥3.10<br />
-依赖项：httpx, urllib3, aiofiles  </p>
-<h2 id="icodeapi">查看icodeapi版本和信息</h2>
-<p>输入命令<br />
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">pip</span> <span class="n">show</span> <span class="n">icodeapi</span>
+<blockquote>
+<p>url ： 用户主页的url  </p>
+</blockquote>
+<p>示例：<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">icodeapi</span> <span class="kn">import</span> <span class="n">getUserIdFromUrl</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://icodeshequ.youdao.com/personal?userId=wxoXQUDj60yxZP7JXZiBRSvJ-SeFf8&#39;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">getUserIdFromUrl</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
 </code></pre></div>
-<a href="https://github.com/xbzstudio/icodeapi">Github仓库地址</a><br />
-<a href="https://pypi.org/project/icodeapi/">PyPI官方页面</a>  </p>
-<details>
-<summary>感谢</summary>
-<p>Python<br />
-httpx<br />
-urllib3<br />
-aiofiles<br />
-mkdocs<br />
-material for mkdocs<br />
-gitbook<br />
-github</p>
-</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>wxoXQUDj60yxZP7JXZiBRSvJ-SeFf8
+</code></pre></div></p>
+<h3 id="_2">获取一个用户的基础信息</h3>
+<p>使用<code>IcodeAPI.getPersonInfo</code>方法。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">getPersonInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">userId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div></p>
+<blockquote>
+<p>userId ： 用户id  </p>
+</blockquote>
+<p><strong>方法的返回值通常格式如下:</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="s1">&#39;worksNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品数量</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="s1">&#39;viewNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 浏览量</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="s1">&#39;praiseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 点赞量</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="s1">&#39;enshrinesNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 收藏量</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    <span class="s1">&#39;forkNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 被改编量</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户id</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    <span class="s1">&#39;img&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户头像</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>    <span class="s1">&#39;nickName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户昵称</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="s1">&#39;intro&#39;</span><span class="p">:</span> <span class="nb">str</span> <span class="c1"># 用户简介</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="_3">获取用户作品信息</h3>
+<p>使用<code>IcodeAPI.getPersonWorks</code>。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span> <span class="nf">getPersonWorks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">userId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">page</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">getNum</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div></p>
+<blockquote>
+<p>userId ： 用户id<br />
+page ： 获取的页数量<br />
+getNum ： 一页里包含的作品数量  </p>
+</blockquote>
+<p><strong>方法的返回值通常格式如下:</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">[</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>   <span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>       <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品ID</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>       <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品标题</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>       <span class="s1">&#39;imgUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品封面图片URL</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>       <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品状态（1：已发布，2：已取消发布）</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>       <span class="s1">&#39;likeNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 点赞数</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>       <span class="s1">&#39;browseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 浏览次数</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>       <span class="s1">&#39;enshrineNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 收藏数</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>       <span class="s1">&#39;forkNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 改编数</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>       <span class="s1">&#39;userName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户名</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>       <span class="s1">&#39;userImage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户头像图片URL</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>       <span class="s1">&#39;codeLanguage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 代码语言（&#39;scratch&#39; 或 &#39;python&#39;）</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>       <span class="s1">&#39;theme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 主题</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>       <span class="s1">&#39;subTheme&#39;</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># 子主题</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>   <span class="p">}</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="_4">获取用户收藏信息</h3>
+<p>使用<code>IcodeAPI.getPersonEnshrines</code>。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span> <span class="nf">getPersonEnshrines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">userId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">page</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">getNum</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div></p>
+<blockquote>
+<p>userId ： 用户id<br />
+page ： 获取的页数量<br />
+getNum ： 一页里包含的作品数量  </p>
+</blockquote>
+<p><strong>方法的返回值通常格式如下:</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">[</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  <span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>      <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品ID</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>      <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品标题</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>      <span class="s1">&#39;imgUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品封面图片URL</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>      <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 发布者userId</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>      <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品状态（1：已发布，2：已取消发布）</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>      <span class="s1">&#39;likeNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 点赞数</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>      <span class="s1">&#39;browseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 浏览次数</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>      <span class="s1">&#39;userName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户名</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>      <span class="s1">&#39;userImage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 用户头像图片URL</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>      <span class="s1">&#39;codeLanguage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 代码语言（&#39;scratch&#39; 或 &#39;python&#39;）</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>      <span class="s1">&#39;theme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 主题</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>      <span class="s1">&#39;subTheme&#39;</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># 子主题</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  <span class="p">}</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">]</span>
+</code></pre></div></p>
 
 
 
@@ -836,10 +945,10 @@ github</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>

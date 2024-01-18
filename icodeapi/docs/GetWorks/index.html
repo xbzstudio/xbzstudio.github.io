@@ -1,0 +1,1203 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xbzstudio.github.io/icodeapi/docs/GetWorks/">
+      
+      
+        <link rel="prev" href="../Login/">
+      
+      
+        <link rel="next" href="../GetPersonInfo/">
+      
+      
+      <link rel="icon" href="../icodeapi.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>获取作品 - icodeapi文档</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Code:300,300i,400,400i,700,700i%7CFira+Code:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Code";--md-code-font:"Fira Code"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="icodeapi文档" class="md-header__button md-logo" aria-label="icodeapi文档" data-md-component="logo">
+      
+  <img src="../icodeapi.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            icodeapi文档
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              获取作品
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xbzstudio/icodeapi" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="icodeapi文档" class="md-nav__button md-logo" aria-label="icodeapi文档" data-md-component="logo">
+      
+  <img src="../icodeapi.svg" alt="logo">
+
+    </a>
+    icodeapi文档
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xbzstudio/icodeapi" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    欢迎
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Login/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    登陆账号
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    获取作品
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    获取作品
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品信息
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="获取作品信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      解析作品ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      作品信息元组生成器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品发布信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取更多作品
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取社区中的所有作品
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取当前账号下的作品
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品评论
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取Scratch作品内部资源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GetPersonInfo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    获取用户
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DoSomething/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    做些什么
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AsyncSupport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    异步支持
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    工具模块
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    构建服务器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    更新日志
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            更新日志
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/Updates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    所有版本
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/v1.0.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.0.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/v1.0.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.0.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/v1.0.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.0.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/v1.3.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.3.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updates/v1.4.0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    v1.4.0
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Compare/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    对比TuringAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    贡献
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品信息
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="获取作品信息">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      解析作品ID
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      作品信息元组生成器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品发布信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取更多作品
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取社区中的所有作品
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取当前账号下的作品
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取作品评论
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      获取Scratch作品内部资源
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>获取作品</h1>
+
+<h2 id="_1">获取作品信息</h2>
+<h3 id="id">解析作品ID</h3>
+<p>使用<code>getWorkIdFromUrl</code>方法从作品url中提取作品的id。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span> <span class="nf">getWorkIdFromUrl</span><span class="p">(</span><span class="n">url</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+<strong>示例：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">icodeapi</span> <span class="kn">import</span> <span class="n">getWorkIdFromUrl</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">getWorkIdFromUrl</span><span class="p">(</span><span class="s1">&#39;https://icodeshequ.youdao.com/work/a1f09b5eb34a48dfbdc8dee59d130ec6&#39;</span><span class="p">))</span>
+</code></pre></div>
+<strong>输出：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a1f09b5eb34a48dfbdc8dee59d130ec6</span>
+</code></pre></div></p>
+<h3 id="_2">作品信息元组生成器</h3>
+<p>使用<code>WorkInfoTupleGenerator</code>函数生成一个作品信息元组，该元组可用于<code>IcodeAPI.submitWork</code>的参数传递。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span> <span class="nf">WorkInfoTupleGenerator</span><span class="p">(</span><span class="n">api</span> <span class="p">:</span> <span class="n">IcodeAPI</span><span class="p">,</span> <span class="n">workId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span>
+</code></pre></div></p>
+<blockquote>
+<p>api : 发送请求使用的IcodeAPI对象<br />
+workId : 作品id  </p>
+</blockquote>
+<p>也有异步版本<code>AsyncWorkInfoTupleGenerator</code>，功能和参数设置完全相同，但是<code>api</code>参数需填入<a href="../AsyncSupport/"><code>AsyncIcodeAPI</code></a>对象。  </p>
+<h3 id="_3">获取作品信息</h3>
+<p>使用<code>IcodeAPI.getWorkDetail</code>方法获取一个作品的基本信息。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">def</span> <span class="nf">getWorkDetail</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="n">workId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> 
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">addBrowseNum</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div></p>
+<blockquote>
+<p>workId ： 作品id<br />
+addBrowseNum ： 是否增加浏览量</p>
+</blockquote>
+<p><strong>返回的字典格式通常如下：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品id</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品标题</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="s1">&#39;imgUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品封面url</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="c1"># 作品简介</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="c1"># 作品类型</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="c1"># 发布者用户id</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="c1"># 发布状态（1为未发布,2为已发布）</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="s1">&#39;likeNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="c1"># 点赞数</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="s1">&#39;browseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="c1"># 浏览量</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="s1">&#39;enshrineNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="c1"># 收藏量</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    <span class="s1">&#39;code&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品源码</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    <span class="s1">&#39;userName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 发布者用户名</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="s1">&#39;userImage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 发布者用户头像url</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    <span class="s1">&#39;haveLiked&#39;</span><span class="p">:</span> <span class="nb">bool</span> <span class="p">,</span>  <span class="c1"># 是否已点赞</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    <span class="s1">&#39;haveEnshrined&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>  <span class="c1"># 是否收藏</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="s1">&#39;createTimeStr&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>   <span class="c1"># 创建时间</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    <span class="s1">&#39;updateTimeStr&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 更新时间</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    <span class="s1">&#39;codeLanguage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 代码语言（blocky, scratch或python）</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    <span class="s1">&#39;shortLink&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 分享链接</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="s1">&#39;theme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品主题</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="s1">&#39;subTheme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布主题</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    <span class="s1">&#39;iframeUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品iframe地址</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>    <span class="s1">&#39;scratchFile&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># scratch作品文件url</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    <span class="s1">&#39;codeType&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 代码类型</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    <span class="s1">&#39;firstPopups&#39;</span><span class="p">:</span> <span class="nb">bool</span> <span class="p">,</span> <span class="c1"># 是否在作品发布者点进该作品后显示弹窗</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>    <span class="s1">&#39;forkAuthorizationStatus&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>  <span class="c1"># 是否允许他人fork</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>    <span class="s1">&#39;isFirstPublish&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span> <span class="c1"># 是否为首次发布</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>    <span class="s1">&#39;haveReported&#39;</span><span class="p">:</span> <span class="nb">bool</span> <span class="c1"># 是否已举报</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="_4">获取作品发布信息</h3>
+<p>使用<code>IcodeAPI.getWorkSubmitInfo</code>方法获取一个作品在发布时向后台提交的数据。（与<code>IcodeAPI.submitWork</code>方法发送的数据几乎相同）。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">def</span> <span class="nf">getWorkSubmitInfo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span>
+</code></pre></div>
+<strong>返回的字典格式通常如下：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="s1">&#39;avatar&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作者头像url</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="s1">&#39;category&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 不明意义</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="s1">&#39;codeType&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 代码类型</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="s1">&#39;commit&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 提交时间</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="s1">&#39;createtime&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 创建时间</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="s1">&#39;description&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品简介</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="s1">&#39;fork&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 是否允许fork</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    <span class="s1">&#39;forkcommit&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 不明意义</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>    <span class="s1">&#39;forkfrom&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 从哪里fork（一个workId）</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    <span class="s1">&#39;likes&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 点赞数</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>    <span class="s1">&#39;owner&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 不明意义</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    <span class="s1">&#39;publish&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 是否公开（1为不公开，2为公开）</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="s1">&#39;qrCodeImage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品二维码图片url</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    <span class="s1">&#39;shareMessage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 分享信息</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="s1">&#39;shareText&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 分享文本</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="s1">&#39;shareTitle&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 分享标题</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    <span class="s1">&#39;subtheme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 发布主题</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>    <span class="s1">&#39;theme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 主题</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>    <span class="s1">&#39;thumbnail&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 封面url</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>    <span class="s1">&#39;thumbnailList&#39;</span><span class="p">:</span> <span class="nb">list</span><span class="p">,</span>  <span class="c1"># 封面列表</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 标题</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作者名</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>    <span class="s1">&#39;visits&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 浏览量</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>    <span class="s1">&#39;workid&#39;</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># 作品id</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="_5">获取更多作品</h3>
+<p>使用<code>IcodeAPI.getMoreWorks</code>方法获取更多作品。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">def</span> <span class="nf">getMoreWorks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">userId</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">workId</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div></p>
+<blockquote>
+<p>参数<code>userId</code>和<code>workId</code>都是可选的，如果同时提供，则以<code>userId</code>为准。<br />
+参数<code>userId</code>为用户id。<br />
+参数<code>workId</code>为作品id。
+如果只填入了<code>workId</code>，那么将会自动使用<code>self.getWorkDetail</code>方法获取作品发布者id。</p>
+</blockquote>
+<p><strong>返回的字典格式通常如下：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">[</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="p">{</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品id</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品标题</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="s1">&#39;imgUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品封面url</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="s1">&#39;likeNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品点赞数</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        <span class="s1">&#39;browseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品浏览数</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        <span class="s1">&#39;userName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 发布者用户名</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        <span class="s1">&#39;userImage&#39;</span><span class="p">:</span> <span class="nb">str</span> <span class="c1"># 发布者头像url</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="p">}</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="c1"># 列表中可以同时存在多个元素，表示有多个作品。</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="_6">获取社区中的所有作品</h3>
+<p>使用<code>IcodeAPI.getWorks</code>方法获取社区中的所有作品。<br />
+<code>IcodeAPI.getWorks</code>提供了检索方式。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">def</span> <span class="nf">getWorks</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> 
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    <span class="n">page</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    <span class="n">getNum</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> 
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    <span class="n">sortType</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    <span class="n">theme</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> 
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>    <span class="n">codeLanguage</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> 
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>    <span class="n">keyword</span> <span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div></p>
+<blockquote>
+<p>参数<code>page</code>为页码，默认为<code>1</code>。<br />
+参数<code>getNum</code>为每页的作品数量，默认为<code>20</code>。<br />
+参数<code>sortType</code>为排序方式，默认为<code>2</code>。1为按点赞量从大到小排序，2则为按发布时间从现在往以前排序。<br />
+参数<code>theme</code>为作品类型，默认为<code>all</code>，即所有类型。可以为all , play , story , art , minecraft ,  scratch , turtle。<br />
+参数<code>codeLanguage</code>为代码语言，默认为<code>all</code>，即所有语言。可以为all , blockly , scratch , python。<br />
+参数<code>keyword</code>为获取到作品的检索关键词，默认为空。  </p>
+</blockquote>
+<p><strong>返回的字典格式通常如下：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">[</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>    <span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品id</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品标题</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="s1">&#39;imgUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品封面url</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布者id</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        <span class="s1">&#39;browseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品浏览量</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        <span class="s1">&#39;userName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布者用户名</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        <span class="s1">&#39;userImage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布者头像url</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        <span class="s1">&#39;codeLanguage&#39;</span><span class="p">:</span> <span class="nb">str</span> <span class="c1"># 作品语言类型</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    <span class="p">}</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="_7">获取当前账号下的作品</h3>
+<p>使用<code>IcodeAPI.getMyWorks</code>方法获取当前登录账号的所有作品。<br />
+它和<code>IcodeAPI.getWorks</code>一样提供检索方式，并且可以获取未发布的作品。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">def</span> <span class="nf">getMyWorks</span><span class="p">(</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    <span class="bp">self</span><span class="p">,</span> 
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    <span class="n">page</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> 
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    <span class="n">getNum</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> 
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    <span class="n">theme</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> 
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    <span class="n">codeLanguage</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;all&#39;</span><span class="p">,</span> 
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    <span class="n">status</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> 
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    <span class="n">keyword</span> <span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div></p>
+<blockquote>
+<p>参数<code>page</code>为页码，默认为<code>1</code>。<br />
+参数<code>getNum</code>为每页的作品数量，默认为<code>20</code>。<br />
+参数<code>theme</code>为作品类型，默认为<code>all</code>，即所有类型。可以为all , play , story , art , minecraft ,  scratch , turtle。<br />
+参数<code>codeLanguage</code>为代码语言，默认为<code>all</code>，即所有语言。可以为all , blockly , scratch , python。<br />
+参数<code>status</code>为作品状态，默认为<code>2</code>，即所有状态。可以为1或2。1为未发布，2为已发布。<br />
+参数<code>keyword</code>为获取到作品的检索关键词，默认为空。  </p>
+</blockquote>
+<p><strong>返回的字典格式通常如下：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">[</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    <span class="p">{</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品id</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品标题</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>        <span class="s1">&#39;imgUrl&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品封面url</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>        <span class="s1">&#39;status&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="c1"># 作品发布状态</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>        <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布者id</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="s1">&#39;likeNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品点赞量</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>        <span class="s1">&#39;browseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品浏览量</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>        <span class="s1">&#39;enshrineNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品收藏量</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>        <span class="s1">&#39;forkNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品被改编量</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>        <span class="s1">&#39;userName&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布者用户名</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>        <span class="s1">&#39;userImage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品发布者头像url</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>        <span class="s1">&#39;codeLanguage&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品语言类型</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>        <span class="s1">&#39;theme&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品类型</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>        <span class="s1">&#39;subTheme&#39;</span><span class="p">:</span> <span class="nb">str</span> <span class="c1"># 作品发布类型</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>    <span class="p">}</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="_8">获取作品评论</h3>
+<p>使用<code>IcodeAPI.getWorkComments</code>方法获取作品的所有评论。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">def</span> <span class="nf">getWorkComments</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workId</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">page</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">getNum</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span>
+</code></pre></div></p>
+<blockquote>
+<p>参数<code>workId</code>为作品id。<br />
+参数<code>page</code>为页码，默认为<code>1</code>。
+参数<code>getNum</code>为每页的评论数量，默认为<code>20</code>。  </p>
+</blockquote>
+<p><strong>返回的字典格式通常如下：</strong><br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">[</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>    <span class="p">{</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品评论id</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品评论内容</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        <span class="s1">&#39;userId&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品评论发布者id</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        <span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品评论发布者用户名</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        <span class="s1">&#39;image&#39;</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>  <span class="c1"># 作品评论发布者头像url</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        <span class="s1">&#39;isAuthor&#39;</span><span class="p">:</span> <span class="nb">bool</span><span class="p">,</span>  <span class="c1"># 是否为作者</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        <span class="s1">&#39;praiseNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品评论点赞量</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        <span class="s1">&#39;replyNum&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品评论回复量</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        <span class="s1">&#39;time&#39;</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span>  <span class="c1"># 作品评论发布时间</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>        <span class="s1">&#39;hasPraised&#39;</span><span class="p">:</span> <span class="nb">bool</span> <span class="c1"># 是否被当前登录的账户点赞</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>    <span class="p">}</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="p">]</span>
+</code></pre></div></p>
+<h3 id="scratch">获取Scratch作品内部资源</h3>
+<p>我们都知道，Scratch作品内部可以包含很多资源，例如图片、音乐等。它们在Scratch中被称为“asset”。<br />
+每个asset有一个自己的md5ext属性，是由文件内容由MD5哈希加密和文件后缀组合而来的。md5ext属性可以在project.json等Scratch源代码文件中找到。<br />
+使用<code>IcodeAPI.getScratchAsset</code>方法可以获取一个在小图灵服务器中指定md5ext属性的asset文件。<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">def</span> <span class="nf">getScratchAsset</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">md5ext</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span>
+</code></pre></div></p>
+<blockquote>
+<p>参数<code>md5ext</code>为asset文件的md5ext属性。  </p>
+</blockquote>
+<p>该方法以二进制(<code>bytes</code>)形式返回asset文件的内容。可以直接使用返回值进行文件读写等操作。<br />
+需要注意的是，如果获取的asset文件类型为svg文件，那么需要将返回值解码。例如：<br />
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kn">from</span> <span class="nn">icodeapi</span> <span class="kn">import</span> <span class="n">IcodeAPI</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="n">cookie</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;请输入cookie: &#39;</span><span class="p">)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="n">api</span> <span class="o">=</span> <span class="n">IcodeAPI</span><span class="p">(</span><span class="n">cookie</span> <span class="o">=</span> <span class="n">cookie</span><span class="p">)</span> <span class="c1"># 构建用户对象</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="c1"># 获取mp3类型 asset文件</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;Everyday World.mp3&quot;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fb</span><span class="p">:</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">getScratchAsset</span><span class="p">(</span><span class="s1">&#39;119eab65876ab93a229d1a339238db39.mp3&#39;</span><span class="p">)</span> <span class="c1"># 获取文件内容</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    <span class="n">fb</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="p">)</span> <span class="c1"># 写入</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="c1"># 获取svg类型 asset文件</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;testsvg.svg&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">getScratchAsset</span><span class="p">(</span><span class="s1">&#39;71b09db63e151c30d92b16181520bb29.svg&#39;</span><span class="p">)</span> <span class="c1"># 获取文件内容</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span> <span class="c1"># 解码内容并写入</span>
+</code></pre></div>
+代码运行完毕后，svg文件可以被正确地查看，mp3文件可以被正常播放。<br />
+如果想了解更多关于Scratch Json的内容，另行参阅：  </p>
+<blockquote>
+<p><a href="https://en.scratch-wiki.info/wiki/JSON">Json - Scratch Wiki</a><br />
+<a href="https://en.scratch-wiki.info/wiki/Scratch_File_Format">Scratch File Format - Scratch Wiki</a><br />
+<a href="http://wwj718.github.io/post/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/scratch3_asset_analysis_2/">Scratch3 Static Assets API</a>  </p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+    
+  </body>
+</html>
