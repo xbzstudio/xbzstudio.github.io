@@ -428,6 +428,46 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../camera/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    摄像机
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../touch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    碰撞检测
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -530,6 +570,8 @@
 <p>这些对象可以拥有自己的私有变量，而不是只能单纯存储它们的xy坐标等基本信息。</p>
 <p>每个对象在列表中都有一个自己的索引index，可以通过这个索引在列表中找到这个对象的信息。并且，每个对象在列表中都有一块自己的占有空间，每个对象最少占有16个列表项目，如果对象有自己的私有变量，占有空间会更大。</p>
 <p>一个对象可以拥有name和kind属性，如果它拥有name属性，那么将可以通过它的name来直接找到这个对象的索引；如果它拥有kind属性，它会被归类到kind类型的对象当中。然后，可以通过一个kind来找到所有被归类到这个kind的对象。（例如，我有很多个对象充当障碍物，我把所有障碍物对象归类到wall类型当中，也就是把它们的kind设置为wall，在检测障碍物是否碰到主角的时候，只需要调用API检测主角是否与任何wall类型的对象发生碰撞即可）</p>
+<p>通过name获取对象的索引：</p>
+<p><img alt="Alt text" src="../image-7.png" /></p>
 <h2 id="svt_1">SVT的使用</h2>
 <p>首先，SVT不是在点击绿旗的时候就立马启动的，而是要接收到<code>SVT.start</code>广播才会启动。</p>
 <p>SVT的使用方式十分简单，只需要您自己动手编辑以下几个函数：</p>

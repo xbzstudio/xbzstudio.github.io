@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://xbzstudio.github.io/svt/docs/v2/2.0.0/import/">
+        <link rel="canonical" href="https://xbzstudio.github.io/svt/docs/v2/2.0.0/touch/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../camera/">
       
-      
-        <link rel="next" href="../quickstart/">
       
       
       <link rel="icon" href="https://4158168004-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FHoNuJAPSgZa67FDifg2Q%2Fuploads%2FlwKDxC0y6ammq7rk4zKh%2Ficon8dc71384.png?alt=media&token=2d2f9c59-2c4a-4d1a-8d4b-d4ab932ec87f">
@@ -22,7 +20,7 @@
     
     
       
-        <title>安装 - StampEverything V2.0.0文档</title>
+        <title>碰撞检测 - StampEverything V2.0.0文档</title>
       
     
     
@@ -113,7 +111,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#svt" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +146,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              安装
+              碰撞检测
             
           </span>
         </div>
@@ -281,19 +279,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../import/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -302,7 +291,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -371,10 +359,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../touch/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    碰撞检测
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -383,6 +391,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置碰撞箱
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      碰撞检测
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      单个对象与一类对象的碰撞检测
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,6 +462,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      设置碰撞箱
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      碰撞检测
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      单个对象与一类对象的碰撞检测
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -423,9 +513,37 @@
   
 
 
-<h1 id="svt">安装SVT</h1>
-<p><a href="https://xbzstudio.github.io/svt/sprites/SVT%20v2.0.0.sprite3">点击下载SVT v2.0.0</a></p>
-<p>下载完成后，可以在Scratch编辑器中导入此角色。</p>
+<h1 id="_1">碰撞检测</h1>
+<p>在纯画笔作品中检测两个对象是否发生碰撞，这是一件及其麻烦的事情，不能使用侦测积木，只能用现成的数据计算出来。但不用担心，SVT已经包装好了这些碰撞检测API，可以直接使用。</p>
+<h2 id="_2">设置碰撞箱</h2>
+<p>在使用碰撞检测API之前，必须先设置碰撞箱。SVT目前支持设种子矩形和圆形的碰撞箱。</p>
+<p>可以使用<code>API.set hit box</code>函数设置碰撞箱。<br />
+参数：</p>
+<blockquote>
+<p>type : 碰撞箱的类型，可以为<code>rectangle</code>（矩形）或<code>circle</code>（圆形）<br />
+a / r : 如果type为circle，这个代表碰撞箱的半径；如果type为rectangle，这个代表碰撞箱的长<br />
+b : 如果type为rectangle，这个代表碰撞箱的宽  </p>
+</blockquote>
+<p>建议在<code>SVT.object init</code>中调用这个API。</p>
+<h2 id="_3">碰撞检测</h2>
+<p>只需要调用<code>API.check touch</code>函数就可以检测两个对象是否发生碰撞。<br />
+参数：</p>
+<blockquote>
+<p>object1_index : 第一个对象的索引<br />
+object2_index : 第二个对象的索引<br />
+update data : 在进行碰撞检测前是否将数据更新为最新（把以<code>SVT.objectData</code>为前缀的变量同步到对象列表中），如果为1则更新</p>
+</blockquote>
+<p>函数执行完毕后，<code>SVT.return</code>将被赋值为真或假。</p>
+<h2 id="_4">单个对象与一类对象的碰撞检测</h2>
+<p>如果想要检测一个对象是否和所有kind属性为xxx的对象发生碰撞，可以使用<code>API.check touch(object and kind)</code>函数。<br />
+参数：</p>
+<blockquote>
+<p>object_index ： 要检测的对象的索引<br />
+kind ： kind属性<br />
+update data : 在进行碰撞检测前是否将数据更新为最新（把以<code>SVT.objectData</code>为前缀的变量同步到对象列表中），如果为1则更新<br />
+i ： 递归用的内部参数，请填写1</p>
+</blockquote>
+<p>函数执行完毕后，<code>SVT.return</code>将被赋值为真或假。</p>
 
 
 

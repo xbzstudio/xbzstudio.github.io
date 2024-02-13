@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://xbzstudio.github.io/svt/docs/v2/2.0.0/import/">
+        <link rel="canonical" href="https://xbzstudio.github.io/svt/docs/v2/2.0.0/camera/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../layers/">
       
       
-        <link rel="next" href="../quickstart/">
+        <link rel="next" href="../touch/">
       
       
       <link rel="icon" href="https://4158168004-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FHoNuJAPSgZa67FDifg2Q%2Fuploads%2FlwKDxC0y6ammq7rk4zKh%2Ficon8dc71384.png?alt=media&token=2d2f9c59-2c4a-4d1a-8d4b-d4ab932ec87f">
@@ -22,7 +22,7 @@
     
     
       
-        <title>安装 - StampEverything V2.0.0文档</title>
+        <title>摄像机 - StampEverything V2.0.0文档</title>
       
     
     
@@ -113,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#svt" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              安装
+              摄像机
             
           </span>
         </div>
@@ -281,19 +281,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../import/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -302,7 +293,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -351,10 +341,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../camera/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    摄像机
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -363,6 +373,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      摄像机属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -407,6 +455,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      摄像机属性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -423,9 +497,19 @@
   
 
 
-<h1 id="svt">安装SVT</h1>
-<p><a href="https://xbzstudio.github.io/svt/sprites/SVT%20v2.0.0.sprite3">点击下载SVT v2.0.0</a></p>
-<p>下载完成后，可以在Scratch编辑器中导入此角色。</p>
+<h1 id="_1">摄像机控制</h1>
+<p>如果你想要控制整个屏幕的显示效果，例如说让整个屏幕旋转、让整个屏幕变大变小等，可以通过更改摄像机属性的变量来控制。</p>
+<h2 id="_2">摄像机属性</h2>
+<p>通过更改这些变量来控制摄像机：</p>
+<blockquote>
+<p><code>SVT.rendering.screen angle</code> : 屏幕角度，-180 ~ 180<br />
+<code>SVT.rendering.screen size</code> : 屏幕缩放，推荐0 ~ 500，100为正常大小<br />
+<code>SVT.rendering.screen x</code> : 屏幕x轴偏移<br />
+<code>SVT.rendering.screen y</code> : 屏幕y轴偏移</p>
+</blockquote>
+<h2 id="_3">示例</h2>
+<p><img alt="Alt text" src="../image-5.png" /></p>
+<p><img alt="Alt text" src="../image-6.png" /></p>
 
 
 

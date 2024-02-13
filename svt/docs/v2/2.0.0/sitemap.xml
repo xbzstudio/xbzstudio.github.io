@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://xbzstudio.github.io/svt/docs/v2/2.0.0/camera/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://xbzstudio.github.io/svt/docs/v2/2.0.0/import/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
@@ -17,6 +22,11 @@
     </url>
     <url>
          <loc>https://xbzstudio.github.io/svt/docs/v2/2.0.0/quickstart/</loc>
+         <lastmod>2024-02-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://xbzstudio.github.io/svt/docs/v2/2.0.0/touch/</loc>
          <lastmod>2024-02-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
