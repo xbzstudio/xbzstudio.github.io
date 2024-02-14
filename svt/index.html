@@ -136,46 +136,122 @@
                 <div class="modal-body">
                     <h5 class="text-center">V2</h5>
                         <div class="row">
-                            <div class="col p-3 text-end lead">V2.0.1</div>
+                            <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-success">推荐</span>V2.0.1</div>
                             <div class="col p-3">
                                 <a href="./sprites/SVT v2.0.1.sprite3"><button type="button" class="btn btn-success">下载</button></a>
                                 <a href="./docs/v2/2.0.1/"><button type="button" class="btn btn-primary">文档</button></a>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#tzo">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="tzo">
+                            <div class="card-body text-center">
+                                1，重写单个对象与一类对象的碰撞检测，经过测试现在已无BUG<br>
+                                2，修复object init会执行多次的BUG<br>
+                                3，把开场动画内嵌的更深了，让When Start as Object函数更加简洁，方便使用<br>
+                                4，添加了一个内置对象：鼠标，name属性为mouse，kind属性为system，造型为None，拥有一个10*10的rectangle碰撞箱，会自动跟随鼠标移动，当然你也可以在Object Init和When Start as Object函数中为它扩展功能（只需要做个检测：name == 'mouse’即可）<br>
+                                5，把开场动画和鼠标等内置对象kind属性改为system
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col p-3 text-end lead">V2.0.0</div>
+                            <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-danger">Bug</span>V2.0.0</div>
                             <div class="col p-3">
                                 <a href="./sprites/SVT v2.0.0.sprite3"><button type="button" class="btn btn-success">下载</button></a>
                                 <a href="./docs/v2/2.0.0/"><button type="button" class="btn btn-primary">文档</button></a>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#tzz">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="tzz">
+                            <div class="card-body text-center">
+                                1，大大加快了渲染和更新数据的效率，在很多情况下，效率将提升10倍不止<br>
+                                2，现在可以像StampEverything V1.2.0一样方便的管理图层了，添加了两个图层API<br>
+                                3，添加了对象的初始化功能，可以自行编写程序作为对象的初始化代码<br>
+                                4，修复了垃圾清理的BUG，现在垃圾清理几乎是瞬时且没有BUG的<br>
+                                5，加入了一些关于渲染器的API，现在可以控制整个屏幕的摄像机角度、摄像机焦距、摄像机xy坐标<br>
+                                6，用clean up blocks+整理了下积木<br>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col p-3 text-end lead">V1.3.0</div>
+                            <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-Primary">可用</span>V1.3.0</div>
                             <div class="col p-3">
                                 <a href="./sprites/SVT v1.3.0.sprite3"><button type="button" class="btn btn-success">下载</button></a>
-                                <a href="./docs/v2/1.3.0/"><button type="button" class="btn btn-primary" disabled>文档</button></a>
+                                <button type="button" class="btn btn-primary" disabled>文档</button>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#othz">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="othz">
+                            <div class="card-body text-center">
+                                整个引擎重构，代码量更少、可读性更好、更易于使用。<br>
+                                StampEverything v1.3.0 具体更新内容：<br>
+                                双旋转矩形碰撞检测算法升级，基于分离轴定理，现在极端情况下不会有误判情况<br>
+                                现在对象的数据都将会存在多个变量中，不用再直接在列表里提取数据，开发效率将会大大大大大大大大大大提高！！！<br>
+                                对管理对象的方法做了大更改，保留了线性表，添加了自动清理垃圾对象的功能<br>
+                                更改了设置对象碰撞箱数据的方法，现在需要使用更高级的API修改<br>
+                                添加main函数，现在可以更方便的编辑主函数<br>
+                                添加了渲染时的回调函数，现在可以充分的扩展渲染功能<br>
+                                现在新建对象不用必填对象的name，这样大大提高了运行效率，另外添加了kind功能，可以给对象设置归属于哪一类的对象，然后可以快速查找这一类的对象的索引<br>
+                                添加控制递归起始点的功能，这是属于比较底层的功能<br>
+                                最重要的，一点，这次更新之后运行效率将会提升20倍不止！！！<br>
+                                可能出现的负优化是圆形碰撞箱和矩形碰撞箱有时会出现误判情况。
                             </div>
                         </div>
                     <h5 class="text-center">V1</h5>
                         <div class="row">
-                            <div class="col p-3 text-end lead">V1.2.0</div>
+                            <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-Primary">可用</span>V1.2.0</div>
                             <div class="col p-3">
                                 <a href="./sprites/SVT v1.2 by xbzstudio.sprite3"><button type="button" class="btn btn-success">下载</button></a>
-                                <a href="./docs/v1/1.2.0/"><button type="button" class="btn btn-primary" disabled>文档</button></a>
+                                <button type="button" class="btn btn-primary" disabled>文档</button>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#otz">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="otz">
+                            <div class="card-body text-center">
+                                1，将纯数据碰撞箱判定部分全部重写，现在该功能已经完全可以投入实战了，好耶！<br>
+                                2，将Object的碰撞箱大小从固定不变改为随着角色大小而变化；<br>
+                                3，修复了Object实际碰撞范围是预设的2/1的问题；<br>
+                                4，修复了绘制Object碰撞箱的绘制长宽问题；<br>
+                                5，添加【SVT.启动引擎】广播；<br>
+                                6，更改了开场动画标识（变得更帅了）。
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col p-3 text-end lead">V1.1.0</div>
+                            <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-secondary">简陋</span>V1.1.0</div>
                             <div class="col p-3">
                                 <button type="button" class="btn btn-success" disabled>下载</button>
                                 <button type="button" class="btn btn-primary" disabled>文档</button>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ooz">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="ooz">
+                            <div class="card-body text-center">
+                                添加碰撞箱功能<br>
+                                改哈希表储存数据为线性表储存，所以兼容了所有scratch版本<br>
+                                添加绘制碰撞箱功能<br>
+                                优化更多内容
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col p-3 text-end lead">V1.0.0</div>
+                            <div class="col p-3 text-end lead"><span style="margin-right:6%;" class="badge bg-secondary">简陋</span>V1.0.0</div>
                             <div class="col p-3">
                                 <button type="button" class="btn btn-success" disabled>下载</button>
                                 <button type="button" class="btn btn-primary" disabled>文档</button>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#ozz">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="ozz">
+                            <div class="card-body text-center">
+                                做好了纯画笔基础框架
                             </div>
                         </div>
                 </div>
