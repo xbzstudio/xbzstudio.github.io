@@ -32,6 +32,7 @@
                 <a href="./docs/v2/"><button type="button" class="btn btn-primary">操作文档</button></a>
             </div>
         </div>
+        <p class="h4 text-center">喜报：SVT全面支持TW的编译模式了</p>
         <div class="row text-center">
             <div class="col p-3">
                 <div class="card">
@@ -135,6 +136,43 @@
                 </div>
                 <div class="modal-body">
                     <h5 class="text-center">V2</h5>
+                        <div class="row">
+                            <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-success">推荐</span>V2.1.0</div>
+                            <div class="col p-3">
+                                <a href="./sprites/SVT v2.1.0.sprite3"><button type="button" class="btn btn-success">下载</button></a>
+                                <a href="./docs/v2/2.1.0/"><button type="button" class="btn btn-primary">文档</button></a>
+                                <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#toz">
+                                    新内容
+                                </button>
+                            </div>
+                        </div>
+                        <div class="collapse" id="toz">
+                            <div class="card-body text-center">
+                                1，【改善】 对API，变量，函数的名称作了全面汉化，更易于国人使用；
+                                <br>
+                                2，【改善】 绝大部分旧版本的功能已支持TurboWarp的编译模式；
+                                <br>
+                                3，【新内容】 当对象处与隐藏状态时，不会被任何别的对象检测到与其发生碰撞；
+                                <br>
+                                4，【BUG修复】 当对象处于隐藏状态时不会再被渲染；
+                                <br>
+                                5，【改善】 优化了SVT.移动到对象处（原SVT.move to object）调整XY坐标的策略；
+                                <br>
+                                6，【改善】 现在SVT.渲染起始索引变量只会影响渲染功能而不会影响刷新对象数据功能，刷新对象数据的起始索引永远为1；
+                                <br>
+                                7，【新内容】 当对象处于隐藏状态时，判断与另一类对象是否发生碰撞时，会立即返回0，减少不必要的计算；
+                                <br>
+                                8，【改善】 修改了计算FPS的算法，现在计算得更准了；
+                                <br>
+                                9，【改善】 改进了渲染策略，当计算量较大时不会出现闪白的情况；
+                                <br>
+                                10，【新内容】 可以直接在主程序函数中自定义SVT初始化的参数；
+                                <br>
+                                11，【BUG修复】 当对象列表已满时，新建带有私有变量的对象时私有变量会被添加到待加入对象列表中；
+                                <br>
+                                12，【新内容】添加几个实用API，部分新API模拟并扩展了原版Scr的运动积木，部分API可用于获取对象索引。
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col p-3 text-end h5"><span style="margin-right:6%;" class="badge bg-success">推荐</span>V2.0.1</div>
                             <div class="col p-3">
