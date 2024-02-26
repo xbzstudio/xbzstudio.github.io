@@ -1,2 +1,83 @@
-<p>XbzStudio WebSite</p>
-<a href="https://xbzstudio.github.io/">click</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>下北泽开发者联盟</title>
+        <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+        <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>    </head>
+    <style>
+
+    </style>
+    <body style="margin: 0px;">
+        <div class="container-fluid">
+            <div ng-app="app" ng-controller="ctrl">
+                <div class="text-center">
+                    <button class="btn btn-success" ng-click="ui = 'index'">简介</button>
+                    <button class="btn btn-primary" ng-click="ui = 'cy'">成员</button>
+                    <button class="btn btn-warning" ng-click="ui = 'hz'">合作</button>
+                    <button class="btn btn-danger" ng-click="ui = 'jr'">加入</button>
+                </div>
+                <div ng-show="ui=='index'">
+                    <div class="text-center">
+                        <p class="h2">下北泽开发者联盟</p><br>
+                        <p>下北泽开发者联盟是在2024年2月21日成立的联盟，前身是2022年5月13日成立的下北泽工作室。英文名称Union of XBZ Developer, 简称UXD。</p><br>
+                        <p>下北泽开发者联盟主要由有图形化编程经验的开发者们组成。</p><br>
+                        <p>下北泽开发者联盟建立的目的是给予开发者们一个交流的平台，让开发者们可以互相交流、互相帮助，通过协作做出更好的项目。</p><br>
+                    </div>
+                    <div class="text-center" style="margin-top:3%;">
+                        <p class="h2">始于图形化，却不止于图形化</p><br>
+                        <p>曾经，下北泽工作室聚焦于以Scratch为代表的图形化编程项目，现在，我们有更加广阔的舞台。</p><br>
+                        <p>下北泽开发者联盟的成员拥有Scratch Extensions, Python, C/C++, C#, Web, GDS, Kotlin的开发经验，部分成员还拥有编曲或绘画的经验！</p><br>
+                        <p>同时，下北泽开发者联盟对Scratch的研究也很深入，热衷于突破甚至扩展Scratch的上限，热衷造轮子和挑战自己。例如制作HpP(100%Pen)项目。</p><br>
+                    </div>
+                    <div class="text-center" style="margin-top:3%;">
+                        <p class="h2">代表项目</p><br>
+                        <p>下北泽的成员们彼此合作，制作出了一个又一个项目。</p><br>
+                        <a href="https://github.com/xbzstudio/Timeless-Sydney" target="_blank">Timeless Sydney</a><br>
+                        <p>功能强大的第三方New Bing web客户端，支持自动越狱，自行选择对话模板，显示生成的图片和代码等功能。已在2023年9月暂停更新。</p><br>
+                        <a href="https://gitblock.cn/Projects/1163622" target="_blank">[精华作品]StampEverything V2</a><br>
+                        <p>功能强大、API丰富的Scratch HpP引擎，支持一切Scratch版本，运行速度快如闪电，自由构建HpP应用、工具甚至游戏！</p><br>
+                        <a href="https://docs.qq.com/doc/p/51060abc015f4242d5a6db655d7c3dbb10e50849" target="_blank">Scratch HpP教程</a><br>
+                        <p>介绍全面、由易到难的简易Scratch HpP开发指南。</p><br>
+                        <a href="https://pypi.org/project/icodeapi/" target="_blank">icodeapi</a><br>
+                        <p>功能强大、持续更新的小图灵社区Python API库，拥有各种基础API和封装好的工具函数、自动机器人功能！无需过多编写代码即可让你的账号实现高度自动化，扩展性极强。</p><br>
+                        <a href="" target="_blank">牌之原神</a><br>
+                        <p>一款以原神为主题的卡牌游戏，制作精良，但在2023年8月已暂停更新。</p><br>
+                        <a href="" target="_blank">[HpP]穿梭蓝天</a><br>
+                        <p>一款持续更新、高技术力的2D大型地图跑酷游戏，是HpP作品。</p><br>
+                        <a href="" target="_blank">[HpP]SCARLET WALL</a><br>
+                        <p>一款以躲避弹幕为主要玩法的游戏，玩法简单，主要是展示技术力。是HpP作品。</p><br>
+                        <a href="" target="_blank">森林</a><br>
+                        <p>一款画风清新、极受欢迎的2D平面跑酷游戏。</p><br>
+                    </div>
+                    <div class="text-center" style="margin-top:3%;">
+                        <p class="h2">待启动或已搁置项目</p><br>
+                        <p>我们未来的目标</p><br>
+                        <a href="" target="_blank">ECMG GalGame Engine</a>
+                        <p>基于Pygame或Godot的GalGame引擎，让用户可以只通过编写一些简单无比的txt文件就可以制作出属于自己的GalGame。该项目预计在2024年3月启动！</p><br>
+                        <a href="" target="_blank">TypingScratch</a><br>
+                        <p>一种新型的编译语言，可以将代码编译为JSON，并自动生成静态资源，让Scratch运行。</p><br>
+                    </div>
+                </div>
+                <div ng-show="ui=='cy'">
+                    
+                </div>
+                <div ng-show="ui=='hz'">
+
+                </div>
+                <div ng-show="ui=='jr'">
+                    
+                </div>
+            </div>
+        </div>
+        <script>
+            var app = angular.module('app', [])
+            function main($scope, $http) {
+                $scope.ui = 'index'
+            }
+            app.controller('ctrl', main)
+        </script>
+    </body>
+</html>
